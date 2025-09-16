@@ -209,5 +209,44 @@
     gtag("js", new Date());
 
     gtag("config", "G-MR6397VMPV");
+
+    document.getElementById("removeEmojis")?.addEventListener("change", (e) => {
+      if (e.target.checked) trackEvent("feature_used", "Remove Emojis");
+    });
+
+    document
+      .getElementById("removeLineBreaks")
+      ?.addEventListener("change", (e) => {
+        if (e.target.checked) trackEvent("feature_used", "Remove Line Breaks");
+      });
+
+    document
+      .getElementById("keepParagraphs")
+      ?.addEventListener("change", (e) => {
+        if (e.target.checked) trackEvent("feature_used", "Keep Paragraphs");
+      });
+
+    document.getElementById("removeSpaces")?.addEventListener("change", (e) => {
+      if (e.target.checked) trackEvent("feature_used", "Remove Extra Spaces");
+    });
+
+    document.getElementById("removeHTML")?.addEventListener("change", (e) => {
+      if (e.target.checked) trackEvent("feature_used", "Remove HTML");
+    });
+
+    document
+      .getElementById("removeDuplicates")
+      ?.addEventListener("change", (e) => {
+        if (e.target.checked)
+          trackEvent("feature_used", "Remove Duplicate Lines");
+      });
+
+    document.getElementById("trimLines")?.addEventListener("change", (e) => {
+      if (e.target.checked) trackEvent("feature_used", "Trim Lines");
+    });
+
+    document.getElementById("smartQuotes")?.addEventListener("change", (e) => {
+      if (e.target.checked) trackEvent("feature_used", "Smart Quotes");
+    });
   </script>
 </html>
